@@ -47,11 +47,13 @@
 
                 if(isset($error) && $error == 0){
                     echo '  <div id="cadreImage">
-                                <img src="' . $adressVersImage . '" id="imageSend"/>
-                            </div>
-                            <input type="text" value="http://localhost:8888/Min_Project/projet2/' .$adressVersImage. '"/>';
+                                <img src="' . $adressVersImage . '" id="imageSend"/><br>
+                            
+                            <input type="text" value="http://localhost:8888/Min_Project/projet2/' .$adressVersImage. '"/>
+                            </div>';
+                }elseif(isset($error) && $error == 1){
+                    echo 'Votre image ne peux pas etre envoyé, verifiez son extension et sa taille qui doit faire 3mo max.';
                 }
-
                 ?>
 
                 <form action="index.php" method="POST" enctype="multipart/form-data">
